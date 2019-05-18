@@ -1,0 +1,229 @@
+﻿/* http://fortawesome.github.io/Font-Awesome/icons/ */
+html {
+  position: relative;
+  min-height: 100%;
+}
+html,body {
+  overflow-x: hidden; /* Prevent scroll on narrow devices */
+}
+body {
+	padding-bottom: 60px;
+	background-color: #6CCFF6;
+    padding:0;
+    margin:0;
+}
+/* Sticky footer with fixed navbar
+-------------------------------------------------- */
+/* Not required for template or sticky footer method. */
+body > .container {
+  padding: 0px 2px;
+}
+/* Extented propety
+-------------------------------------------------- */
+#header
+{
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	/*height: 136px;*/
+	z-index: 1030;
+	position: fixed;
+	padding-bottom:48px;
+	background-color: #AAE1FA;
+}
+.badge
+{
+	background-color: #2EBDB6;
+}
+#header #header-nav
+{
+	top: 0px;
+	right: 0px;
+	left: 0px;
+	z-index: 1030;
+	position: fixed;
+}
+#header #header-nav ul 
+{
+	float: right;/**/ 
+	margin-bottom: 4px;
+}
+#header #header-nav ul li
+{
+	display: inline;
+	list-style:none; 
+}
+#header #banner
+{
+	height: 82px; 
+	/*background:url(images/img02.jpg) border: 1px solid;*/
+}
+
+#header #banner img
+{
+	height: 75px !important;
+}
+#header #fix-nav a
+{
+	color: #000 !important;
+}
+#header #banner,#header #fix-nav
+{
+	padding: 5px; 	
+	margin-right:-19px; 
+}
+#header /* #fix-nav */.fa {
+    padding-right: 5px !important;
+}
+.navbar-inverse
+{
+	border-color: #6CCFF6 !important;
+	background-color: #00BBD7 !important;
+}
+#header >.navbar-fixed-top
+{
+	top: 85px;
+}
+a.list-group-item:hover,
+ a.list-group-item:focus
+ {
+	color: #2EBDB6;
+ }
+.list-group-item.active, 
+.list-group-item.active:hover, 
+.list-group-item.active:focus
+{
+	background-color: #2EBDB6;
+	border-color: #2EBDB6;
+}
+.navbar-inverse .navbar-nav > .active > a,
+ .navbar-inverse .navbar-nav > .active > a:hover,
+ .navbar-inverse .navbar-nav > .active > a:focus
+ {
+  color: #fff !important;
+  background-color: #6CCFF6;
+}
+.navbar-inverse .navbar-brand,
+.navbar-inverse .navbar-nav > li > a,
+.navbar-inverse .navbar-nav 
+.open .dropdown-menu > li > a
+{
+	color: #000 !important;
+}
+.navbar-inverse .navbar-nav > li > a:hover,
+.navbar-inverse .navbar-nav > li > a:focus,
+.navbar-inverse .navbar-brand:hover,
+.navbar-inverse .navbar-brand:focus
+ {
+  color: #fff !important;
+}
+
+.ui-dialog
+{
+	/*z-index: 1031 !important;*/
+}
+.ui-dialog .ui-dialog-titlebar-close span
+{
+	margin: -8px -9px;
+}
+.container {
+    /*width: 100%;*/
+}
+.visible-xs {
+    /*position: fixed;*/
+    right: 10px;
+    top: 53px;
+	margin-top: 7px;
+	border: 1px solid;
+	border-radius: 4px;
+	
+}
+.visible-xs>.btn  {
+	padding-top: 4px;
+	padding-bottom: 8px;
+	font-family: Arial Black;
+}
+.container .text-muted {
+  margin: 20px 0;
+}
+
+.footer > .container {
+  padding-right: 15px;
+  padding-left: 15px;
+}
+.container .jumbotron, 
+.container-fluid .jumbotron
+{
+	padding: 4px;
+}
+
+#contain-main {
+	min-height: 650px;
+}
+.panel-main
+{
+  min-height: 610px;
+  overflow-x: auto;
+}
+#sidebar {
+ padding-right: 0px;
+ padding-left: 0px;
+}
+
+/*
+ * Off Canvas
+ * --------------------------------------------------
+ */
+@media screen and (max-width: 767px) {
+  .row-offcanvas {
+    position: relative;
+    -webkit-transition: all .25s ease-out;
+         -o-transition: all .25s ease-out;
+            transition: all .25s ease-out;
+  }
+
+  .row-offcanvas-right {
+    right: 0;
+  }
+
+  .row-offcanvas-left {
+    left: 0;
+  }
+
+  .row-offcanvas-right
+  .sidebar-offcanvas {
+    right: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left
+  .sidebar-offcanvas {
+    left: -50%; /* 6 columns */
+  }
+
+  .row-offcanvas-right.active {
+    right: 50%; /* 6 columns */
+  }
+
+  .row-offcanvas-left.active {
+    left: 50%; /* 6 columns */
+  }
+
+  .sidebar-offcanvas {
+    position: absolute;
+    top: 0;
+    width: 50%; /* 6 columns */
+  }
+}
+
+
+code {
+  font-size: 80%;
+}
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  /* Set the fixed height of the footer here */
+  height: 60px;
+  background-color: #AAE1FA;
+}

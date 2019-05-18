@@ -1,0 +1,43 @@
+﻿@using System.Data;
+@{
+    ViewBag.Title = "Import Excel";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+
+
+<style type="text/css">
+       
+        table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        tr:nth-of-type(odd) {
+            background: #eee;
+        }
+
+        th {
+            background: #333;
+            color: white;
+            font-weight: bold;
+        }
+
+        td, th {
+            padding: 6px;
+            border: 1px solid #ccc;
+            text-align: left;
+        }
+        
+    
+</style>
+
+
+@using (Html.BeginForm("ImportExcel", "Contact", FormMethod.Post, new { enctype = "multipart/form-data" }))
+
+{
+    <table>
+        <tr><td>Excel file</td><td><input type="file" id="upload" name="upload" /></td></tr>
+        <tr><td></td><td><input type="submit" id="Submit" name="Submit" value="Submit" /></td></tr>
+    </table>
+}

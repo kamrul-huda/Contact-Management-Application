@@ -1,0 +1,48 @@
+﻿
+table.special-table {
+    color: #333;
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+    table.special-table th {
+        background: #F3F3F3;
+        font-weight: bold;
+        text-align: center;
+        border: 1px solid #CCC;
+        height: 30px;
+    }
+
+    table.special-table td {
+        background: #FAFAFA;
+        text-align: center;
+        border: 1px solid #CCC;
+        height: 30px;
+    }
+
+
+th, td {
+    padding: 8px;
+}
+
+tr:nth-child(odd) {
+    background-color: #f2f2f2;
+}
+
+th {
+    /*background-color: #4CAF50;*/
+    background-color: gray;
+    color: white;
+}
+
+ .error {
+        color: red;
+    }
+
+
+
+  .detailfield .form-group {
+        margin-right: 0 !important;
+        margin-left: 0 !important;
+    }

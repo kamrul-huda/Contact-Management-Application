@@ -1,0 +1,160 @@
+﻿@{
+    ViewBag.Title = "Contact";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+<link href="~/Style/StyleSheet.css" rel="stylesheet" />
+
+<div ng-app="app">
+    <div ng-controller="contactCtrl">
+        <div class="box box-info">
+            <form id="frmEntry" name="frmEntry" class="form-horizontal" novalidate>
+                <div class="box-body">
+                    <div class="col-md-12 mycontainer">
+                        <div class="form-group">
+                            <input type="hidden" ng-model="contactId" />
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Category</label>
+                                    <div class="col-sm-6">
+                                        <select class="form-control" ng-model="categoryId" ng-options="c.Id as c.Name for c in categories" name="categoryId" required>
+                                            <option value="">-- Select --</option>
+                                        </select>
+                                        <span ng-show="frmEntry.$submitted || frmEntry.categoryId.$touched">
+                                            <span class="error" ng-show="frmEntry.categoryId.$error.required">Category is required.</span>
+                                        </span>
+                                    </div>
+                                    <label class="col-sm-1 error">*</label>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Name</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" ng-maxlength="150" name="name" ng-model="name" required />
+                                        <span ng-show="frmEntry.$submitted || frmEntry.name.$touched">
+                                            <span class="error" ng-show="frmEntry.name.$error.required">Name is required.</span>
+                                        </span>
+                                    </div>
+                                    <label class="col-sm-1 error">*</label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Email</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" ng-model="email" name="email" />
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Mobile</label>
+                                    <div class="col-sm-6">
+                                        <input type="text" class="form-control" name="mobile" ng-model="mobile" />
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="form-group">
+                                    <label class="col-sm-4 control-label">Address</label>
+                                    <div class="col-sm-6">
+                                        <input class="form-control" type="text" ng-model="address" name="address" />
+
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                @*<div class="form-group">
+
+                                        <label class="col-sm-4 control-label">Description</label>
+                                        <div class="col-sm-6">
+                                            <input type="text" class="form-control" ng-maxlength="150" name="description" ng-model="description" />
+                                            <span class="error" ng-show="frmEntry.description.$error.maxlength">
+                                                Description not more than 150 char.
+                                            </span>
+                                        </div>
+
+                                    </div>*@
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="box-footer">
+                    <div class="col-md-6">
+                    </div>
+                    <div class="col-md-6 text-right" style="padding-right:7%; ">
+                        <button type="submit" class="btn btn-primary" ng-click="addUpdateContact(frmEntry)"><span class="glyphicon glyphicon-save"></span>&nbsp;{{Action}}</button>
+                        <input type="button" class="btn btn-danger" value="Clear" ng-click="Cancel(frmEntry)" />                        
+                    </div>
+                </div>
+            </form>
+
+            <div class="col-xs-12">
+                <div class="box box-info">
+                    <div class="box-body">
+                        <table datatable="ng" dt-options="dtOptions" class="table table-hover">
+                            <thead>
+                                <tr class="bg-gray">
+                                    <th>SL</th>
+                                    <th>Category</th>
+                                    <th>Name</th>
+                                    <th>Email</th>
+                                    <th>Mobile</th>
+                                    <th>Address</th>
+                                    <th>Action</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr ng-repeat="c in contacts">
+                                    <td>{{$index+1}}</td>
+                                    <td>{{c.Title}}</td>
+                                    <td>{{c.Name}}</td>
+                                    <td>{{c.Email}}</td>
+                                    <td>{{c.Mobile}}</td>
+                                    <td>{{c.Address}}</td>
+                                    <td>
+                                        <a class="btn btn-xs update" ng-click="editContact($index)" title="Edit"><i class="glyphicon glyphicon-pencil"></i></a>
+                                        <a class="btn btn-xs update" ng-click="deleteContact($index)" title="Delete"><i class="glyphicon glyphicon-trash"></i></a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    @using (Html.BeginForm("ExportListFromTable", "Contact", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="submit" class="btn btn-primary" id="Submit" name="Submit" value="Export to Excel" />
+    }
+    @using (Html.BeginForm("ExportListFromCsv", "Contact", FormMethod.Post, new { enctype = "multipart/form-data" }))
+    {
+        <input type="submit" class="btn btn-warning" id="Submit" name="Submit" value="Export to CSV" />
+    }
+</div>
+
+
+@section scripts
+{
+    <script src="~/Scripts/angular/angular.min.js"></script>
+    <script src="~/Scripts/angular/console-sham.js"></script>
+
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.directive.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.instances.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.util.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.renderer.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.factory.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.options.js"></script>
+    <script src="~/Scripts/angular/datatable/src/angular-datatables.js"></script>
+
+    <script src="~/CustomJS/Angular/common/appSettings.js"></script>
+    <script src="~/CustomJS/Angular/app.js"></script>
+    <script src="~/CustomJS/Angular/Controller/contactController.js"></script>
+}

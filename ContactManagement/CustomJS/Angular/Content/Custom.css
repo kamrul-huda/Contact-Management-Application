@@ -1,0 +1,119 @@
+﻿#fancybox-close
+{
+ right: -35px !important;
+}
+.timer, #fa-resize, #resizer, #sidebar-chevron{
+  display: none;
+}
+.upcoming {
+  color: #7200FF;
+  font-style:italic;
+  padding-left: 2px;
+}
+.ui-widget-header
+{
+	background:#2EBDB6
+}
+.ui-state-default, .ui-widget-content .ui-state-default, .ui-widget-header .ui-state-default
+{/*
+	border: 1px solid #D3D3D3;
+	background: url("images/ui-bg_glass_75_e6e6e6_1x400.png") repeat-x scroll 50% 50% #E6E6E6;*/
+	background: #AAE1FA ;
+	border: #AAE1FA;
+}
+.y-panel{
+  min-height: 580px;
+  overflow-y:auto;
+  width:90%;
+}
+@media (min-width: 768px) {
+  .timer {
+    top: 25px;
+    right: 13%;
+	padding:10px;
+	display:block;
+    position: fixed;
+  }
+  #fa-resize,#resizer,#sidebar-chevron{
+	border: 1px solid rgb(200, 191, 191); 
+	padding: 5px; vertical-align: top; 
+	margin-top: -5px;
+	display:block;
+  }
+}
+#header-state
+{ 
+	height: 6px; 
+	cursor: pointer;
+	z-index: 1;/**/
+}
+#header-state.up
+{
+	background: url("../Images/icon/toggle-up.gif") no-repeat scroll center bottom transparent;
+}
+#header-state.down
+{
+	background: url("../Images/icon/toggle-dn.gif") no-repeat scroll center bottom transparent;
+}/**/
+#fix-nav li a
+{
+	padding: 0 0px 0 10px;
+}
+#fix-nav li li, #nav-level-01 li li li
+{
+	padding: 0px;
+}
+.flag {
+    background: url("flags4.png") no-repeat scroll 0px 0px transparent;
+    display: inline-block;
+    height: 11px;
+    margin-right: 6px;
+    width: 16px;
+}
+#context {min-height: 0px !important;}
+.ui-dialog .ui-dialog-titlebar {padding: 0.1em 0.8em; !important;}
+.arrowL:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	right: 100%;
+	top: 50%;
+	margin-top: -13px;
+	width: 0;
+	height: 0;
+	border-top: 13px solid transparent;
+	border-right: 10px solid #2EBDB6;
+	border-bottom: 13px solid transparent;
+	border-left: 10px solid transparent;
+}
+.arrowB:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 20px solid darkcyan;
+	border-right: 100px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 100px solid transparent;
+}
+.arrowB1:after {
+	content: '';
+	display: block;  
+	position: absolute;
+	left: 0;
+	top: 100%;
+	width: 0;
+	height: 0;
+	border-top: 20px solid darkcyan;
+	border-right: 100px solid transparent;
+	border-bottom: 0 solid transparent;
+	border-left: 100px solid transparent;
+}
+
+
+/*
+
+*/

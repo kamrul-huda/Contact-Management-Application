@@ -1,0 +1,100 @@
+/*--------------------------------------------------|
+| generic 3.1 | www.destroydrop.com/javascript/tree/ |
+|---------------------------------------------------|
+| Copyright (c) 2002-2003 Abdus Sobhan               |
+|--------------------------------------------------*/
+
+.generic {
+	font-family: Verdana, Geneva, Arial, Helvetica, sans-serif !important;
+	font-size: 11px !important;
+	color: #666 !important;
+	white-space: nowrap !important;
+}
+.generic img {
+	border: 0px !important;
+	vertical-align: middle !important;
+}
+.generic a img {
+	-moz-margin-start: -95px !important;
+}
+.generic a img {
+	margin-top: 62px !important;
+    margin-left: -166px;
+}
+.generic a {
+	color: #333 !important;
+	text-decoration: none !important;
+}
+.generic a.node, .generic a.nodeSel {
+	white-space: nowrap !important;
+	padding: 1px 2px 1px 2px !important;
+}
+.generic a.node:hover, .generic a.nodeSel:hover {
+	color: #333 !important;
+	text-decoration: underline !important;
+}
+.generic a.nodeSel {
+	background-color: #c0d2ec !important;
+}
+.generic .clip {
+	overflow: hidden !important;
+}
+.dds
+{ 
+	border-top-width:thin !important;
+	border-top-style:dotted !important;
+	border-top-color:Gray !important;
+}
+.circle
+ {
+	/* width: 70px;
+	height: 70px;*/
+	padding: 15px !important;
+	min-height: 70px !important;
+	min-width: 70px !important;
+	border: 2px solid red !important;
+	-moz-border-radius: 70px !important;
+	-webkit-border-radius: 70px !important;
+	border-radius: 70px !important;
+	float: left !important;
+	
+	/*left:15%;
+	position:relative;*/
+ }
+ .circles
+ {
+	/* width: 70px;
+	height: 70px;*/
+	padding: 15px !important;
+	min-height: 70px !important;
+	min-width: 70px !important;
+	border: 1px dashed gray !important;
+	-moz-border-radius: 70px !important;
+	-webkit-border-radius: 70px !important;
+	border-radius: 70px !important;
+	float: left !important;
+	
+	/*left:15%;
+	position:relative;margin: -12px;*/
+ }
+ .copy{margin: 2px -4px; color:#fff !important;}
+ .update{margin:2px -4px; color:#000 !important;}
+ .none{text-align:center; margin: 10px -4px;}
+ .generic .manage_person
+ { 
+ 	display: none;
+	text-align:center;
+	background-color: rgba(117, 201, 230, 0.6) !important;/**/
+ } 
+ .generic .person_node:hover 
+ {
+ 	background: rgba(117, 201, 230, 0.7) !important;
+ }
+ .generic .person_node:hover .manage_person
+ { 
+    display:  block !important;
+ }
+ .generic .person_node:hover .none
+ { 
+    display:  none !important;
+ }
